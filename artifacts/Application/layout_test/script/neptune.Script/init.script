@@ -1,0 +1,3 @@
+AppCache.Load("appOne", { parentObject: appOne });
+AppCache.Load("appTwo", { parentObject: appTwo });
+AppCache.Load("appThree", { parentObject: appThree });

@@ -1,0 +1,272 @@
+{
+	"id": "181b917e-4d2e-4033-b39c-78a18230c25f",
+	"createdAt": "2024-02-08T15:39:09.000Z",
+	"createdBy": "admin",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "4f156f90-adef-4ac5-aaf5-81c741e8a8a8",
+			"path": "/items",
+			"summary": "List all items",
+			"method": "GET",
+			"example": "",
+			"responses": [
+				{
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"content": [
+						{
+							"objectType": "array",
+							"name": "Item"
+						}
+					]
+				}
+			],
+			"headers": [],
+			"parameters": [],
+			"content": []
+		},
+		{
+			"id": "a6e4dc50-6e42-456e-b2e0-e004de00505a",
+			"path": "/items",
+			"summary": "Create a new item",
+			"method": "POST",
+			"example": "",
+			"responses": [
+				{
+					"status": "201",
+					"description": "Created",
+					"headers": [],
+					"content": [
+						{
+							"name": "Item",
+							"objectType": "object"
+						}
+					]
+				}
+			],
+			"headers": [],
+			"parameters": [],
+			"content": [
+				{
+					"objectType": "object",
+					"required": true,
+					"name": "ItemInput"
+				}
+			]
+		},
+		{
+			"id": "f2068185-f2d7-4e7a-e7e4-4397969f40d6",
+			"path": "/items/(id)",
+			"summary": "Get a single item",
+			"method": "GET",
+			"example": "",
+			"responses": [
+				{
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"content": [
+						{
+							"name": "Item",
+							"objectType": "object"
+						}
+					]
+				},
+				{
+					"status": "404",
+					"description": "Item not found",
+					"headers": [],
+					"content": [
+						{
+							"name": "Error",
+							"objectType": "object"
+						}
+					]
+				}
+			],
+			"headers": [],
+			"parameters": [
+				{
+					"name": "id",
+					"inPath": true,
+					"required": true,
+					"type": "string"
+				}
+			],
+			"content": []
+		},
+		{
+			"id": "dd06fbbf-2042-4e07-b750-de43b6ff466d",
+			"path": "/items/(id)",
+			"summary": "Update an existing item",
+			"method": "PUT",
+			"example": "",
+			"responses": [
+				{
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"content": [
+						{
+							"name": "Item",
+							"objectType": "object"
+						}
+					]
+				}
+			],
+			"headers": [],
+			"parameters": [
+				{
+					"name": "id",
+					"inPath": true,
+					"required": true,
+					"type": "string"
+				}
+			],
+			"content": [
+				{
+					"objectType": "object",
+					"required": true,
+					"name": "ItemInput"
+				}
+			]
+		},
+		{
+			"id": "378c81dc-0abc-45af-d786-c182becfd6ca",
+			"path": "/items/(id)",
+			"summary": "Delete an item",
+			"method": "DELETE",
+			"example": "",
+			"responses": [
+				{
+					"status": "204",
+					"description": "No Content",
+					"headers": [],
+					"content": []
+				}
+			],
+			"headers": [],
+			"parameters": [
+				{
+					"name": "id",
+					"inPath": true,
+					"required": true,
+					"type": "string"
+				}
+			],
+			"content": []
+		}
+	],
+	"definitions": [
+		{
+			"id": "b8589fe0-c27e-4ee5-aced-9fed0256a911",
+			"name": "Item",
+			"properties": [
+				{
+					"id": "85b669ea-764f-4436-c3a6-3d981ad4d00b",
+					"name": "id",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": "",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "52525147-b952-40a0-fa54-0c3ae7664f74",
+					"name": "name",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": "",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				}
+			]
+		},
+		{
+			"id": "30ccd60d-5efb-455e-ecd9-dfaf6897165d",
+			"name": "ItemInput",
+			"properties": [
+				{
+					"id": "3c49c4a7-d399-46a6-86a3-8af2752e8a88",
+					"required": true,
+					"name": "name",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": "",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				}
+			]
+		},
+		{
+			"id": "e0dd9aa1-b980-4bab-b13e-34d11aee8c72",
+			"name": "Error",
+			"properties": [
+				{
+					"id": "e2be5fe4-f7dc-4127-feeb-1e44b694c979",
+					"name": "error",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": "",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				}
+			]
+		}
+	],
+	"documentation": [],
+	"name": "TestApi",
+	"endpoint": "http://localhost:3000",
+	"ver": "24.2.8.1933",
+	"version": "1.0.0",
+	"description": null,
+	"mediaType": "application/json",
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "",
+	"about": "<p>A simple CRUD API for testing purposes</p>",
+	"enableProxy": false,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "acff775f-4817-4f25-977e-272b641129b5",
+	"apiGroup": null,
+	"apiFormat": 0,
+	"roles": []
+}

@@ -1,0 +1,8 @@
+const context = oEvent.oSource.getBindingContext();  
+const data = context.getObject();
+
+var options = {
+    "id": data.id
+};
+
+apiitemsDELETE(options);

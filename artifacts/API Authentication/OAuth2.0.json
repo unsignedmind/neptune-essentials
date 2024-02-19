@@ -1,0 +1,26 @@
+{
+	"id": "f4f47b85-ee32-4121-8e14-517ed062d557",
+	"createdAt": "2024-02-02T16:52:59.000Z",
+	"createdBy": "admin",
+	"headers": [],
+	"details": {
+		"subject": {},
+		"headers": [],
+		"url": "sadasdsad",
+		"password": "",
+		"secret": ""
+	},
+	"azureRelayDetails": {
+		"ns": "",
+		"path": "",
+		"keyRule": "",
+		"key": ""
+	},
+	"name": "OAuth2.0",
+	"description": null,
+	"type": "oauth2",
+	"useCloudConnector": false,
+	"cloudConnectorType": null,
+	"ver": null,
+	"package": "acff775f-4817-4f25-977e-272b641129b5"
+}

@@ -1,0 +1,35 @@
+.layouttest section {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "appOne appTwo"
+    "appOne appThree";
+}
+
+.layouttest section > :nth-child(1) {
+  grid-area: appOne;
+}
+
+.layouttest section> :nth-child(2) {
+  grid-area: appTwo;
+}
+
+.layouttest section > :nth-child(3) {
+  grid-area: appThree;
+}
+
+.layouttest section > .sapMPanel {
+    overflow: hidden;
+    box-sizing: border-box;
+    position: unset;
+}
+
+.layouttest section > .sapMPanel > .sapMPanelContent  {
+    padding: 0;
+    box-sizing: border-box;
+    overflow: unset;
+    white-space: unset;
+}

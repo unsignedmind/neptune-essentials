@@ -1,0 +1,513 @@
+{
+	"id": "090339cf-84e6-42cb-9dda-c7ea96bc0a0c",
+	"createdAt": "2024-02-02T16:25:10.000Z",
+	"createdBy": "admin",
+	"auth": [],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "9e6e9af9-fce7-4745-a4aa-43e65e7d035e",
+			"path": "/people",
+			"summary": "Get all the people resources",
+			"method": "GET",
+			"example": "",
+			"responses": [],
+			"headers": [],
+			"parameters": [],
+			"content": [],
+			"tags": "people"
+		},
+		{
+			"id": "b48da4b6-2553-4262-c32b-31dbcbe498d6",
+			"path": "/people/(peopleId)",
+			"description": "Returns a single people",
+			"summary": "Get a specific people resource",
+			"method": "GET",
+			"example": "",
+			"responses": [
+				{
+					"status": "200",
+					"description": "successful operation",
+					"headers": [],
+					"content": [
+						{
+							"name": "People",
+							"objectType": "object"
+						}
+					]
+				},
+				{
+					"status": "400",
+					"description": "Invalid ID supplied",
+					"headers": [],
+					"content": []
+				},
+				{
+					"status": "404",
+					"description": "person not found",
+					"headers": [],
+					"content": []
+				}
+			],
+			"headers": [],
+			"parameters": [
+				{
+					"name": "peopleId",
+					"description": "ID of person to return",
+					"inPath": true,
+					"required": true,
+					"type": "integer"
+				}
+			],
+			"content": [],
+			"tags": "people"
+		},
+		{
+			"id": "688c80af-2989-4451-c7d9-11690c7a5536",
+			"path": "/films",
+			"summary": "Get all the film resources",
+			"method": "GET",
+			"example": "",
+			"responses": [],
+			"headers": [],
+			"parameters": [],
+			"content": [],
+			"tags": "films"
+		},
+		{
+			"id": "3d3349a0-827b-4828-db79-70182041cc44",
+			"path": "/films/(filmId)",
+			"description": "Returns a specific film",
+			"summary": "get a specific film resource",
+			"method": "GET",
+			"example": "",
+			"responses": [
+				{
+					"status": "200",
+					"description": "successful operation",
+					"headers": [],
+					"content": [
+						{
+							"name": "Films",
+							"objectType": "object"
+						}
+					]
+				},
+				{
+					"status": "400",
+					"description": "Invalid ID supplied",
+					"headers": [],
+					"content": []
+				},
+				{
+					"status": "404",
+					"description": "Order not found",
+					"headers": [],
+					"content": []
+				}
+			],
+			"headers": [],
+			"parameters": [
+				{
+					"name": "filmId",
+					"description": "ID of film that needs to be fetched",
+					"inPath": true,
+					"required": true,
+					"type": "integer"
+				}
+			],
+			"content": [],
+			"tags": "films"
+		},
+		{
+			"id": "3108285e-6f35-4c7f-b027-0efd5a4405c6",
+			"path": "/starships",
+			"description": "This can only be done by the logged in user.",
+			"summary": "Shows all the starships",
+			"method": "POST",
+			"example": "",
+			"responses": [
+				{
+					"status": "default",
+					"description": "successful operation",
+					"headers": [],
+					"content": []
+				}
+			],
+			"headers": [],
+			"parameters": [],
+			"content": [
+				{
+					"objectType": "object",
+					"required": true,
+					"name": "User"
+				}
+			],
+			"tags": "starships"
+		},
+		{
+			"id": "a5bf635a-757f-4152-8f26-779751396a3b",
+			"path": "/starships/(starshipId)",
+			"summary": "Get starship by its id",
+			"method": "GET",
+			"example": "",
+			"responses": [
+				{
+					"status": "200",
+					"description": "successful operation",
+					"headers": [],
+					"content": [
+						{
+							"name": "User",
+							"objectType": "object"
+						}
+					]
+				},
+				{
+					"status": "400",
+					"description": "Invalid username supplied",
+					"headers": [],
+					"content": []
+				},
+				{
+					"status": "404",
+					"description": "User not found",
+					"headers": [],
+					"content": []
+				}
+			],
+			"headers": [],
+			"parameters": [
+				{
+					"name": "starshipId",
+					"description": "The name that needs to be fetched. Use user1 for testing.",
+					"inPath": true,
+					"required": true,
+					"type": "string"
+				}
+			],
+			"content": [],
+			"tags": "starships"
+		},
+		{
+			"id": "6c950d64-50cf-450a-a290-134d73087d4d",
+			"path": "/starships/(starshipId)",
+			"description": "This can only be done by the logged in user.",
+			"summary": "Updated user",
+			"method": "PUT",
+			"example": "",
+			"responses": [
+				{
+					"status": "400",
+					"description": "Invalid user supplied",
+					"headers": [],
+					"content": []
+				},
+				{
+					"status": "404",
+					"description": "User not found",
+					"headers": [],
+					"content": []
+				}
+			],
+			"headers": [],
+			"parameters": [
+				{
+					"name": "username",
+					"description": "name that need to be updated",
+					"inPath": true,
+					"required": true,
+					"type": "string"
+				}
+			],
+			"content": [
+				{
+					"objectType": "object",
+					"required": true,
+					"name": "User"
+				}
+			],
+			"tags": "user"
+		},
+		{
+			"id": "a2bdb104-03b7-4020-b086-0c4a41d3e3e9",
+			"path": "/starships/(starshipId)",
+			"description": "This can only be done by the logged in user.",
+			"summary": "Delete user",
+			"method": "DELETE",
+			"example": "",
+			"responses": [
+				{
+					"status": "400",
+					"description": "Invalid username supplied",
+					"headers": [],
+					"content": []
+				},
+				{
+					"status": "404",
+					"description": "User not found",
+					"headers": [],
+					"content": []
+				}
+			],
+			"headers": [],
+			"parameters": [
+				{
+					"name": "username",
+					"description": "The name that needs to be deleted",
+					"inPath": true,
+					"required": true,
+					"type": "string"
+				}
+			],
+			"content": [],
+			"tags": "user"
+		}
+	],
+	"definitions": [
+		{
+			"id": "f1547d72-6cb2-4b56-95ca-092f6b5dbf61",
+			"name": "People",
+			"properties": [
+				{
+					"id": "031d296b-b248-4606-dce8-bc2541dd5fd5",
+					"name": "name",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": "",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "0590425a-acb3-4f02-b1b8-8dd414badc3e",
+					"name": "birth_year",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": "",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "364dfddd-d517-4133-8f92-1da70b561444",
+					"name": "eye_color",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": "",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "7e7a2905-a37d-432e-b6ff-7aa2f5d7f134",
+					"name": "gender",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": "",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "f46bd766-496e-459d-8d8d-3e2dc3fcc1f6",
+					"name": "hair_color",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": "",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "36feafe2-2799-4efe-ecb1-6518d5021e4e",
+					"name": "height",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": "",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "d8855006-0348-4402-edec-70e7fbfee004",
+					"name": "mass",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": "",
+					"isParent": false,
+					"enableValueHelp": false,
+					"canAddSubNode": false,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "fa883d41-c2ef-4317-d917-3427059b62d5",
+					"name": "films",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "array",
+					"maxLength": "",
+					"isParent": true,
+					"enableValueHelp": false,
+					"canAddSubNode": true,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				},
+				{
+					"id": "431d3517-b5f4-4cbb-a9d9-c0c363c95cda",
+					"name": "starships",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "array",
+					"maxLength": "",
+					"isParent": true,
+					"enableValueHelp": false,
+					"canAddSubNode": true,
+					"enabled": true,
+					"showNameField": true,
+					"children": []
+				}
+			]
+		},
+		{
+			"id": "b4c446a8-f0e9-4b46-c47a-f0af4ec153db",
+			"name": "Films",
+			"properties": [
+				{
+					"id": "6f8eb89b-c65b-4446-fd6e-317607d252df",
+					"name": "title",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": ""
+				},
+				{
+					"id": "23a8f016-3d38-4582-e0af-2312906dc49d",
+					"name": "episode_id",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": ""
+				},
+				{
+					"id": "270cf1c1-b67b-4649-9c9f-c6f60d2a0532",
+					"name": "opening_crawl",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": ""
+				},
+				{
+					"id": "cb622526-107d-4826-94f9-7dc19d9cb39c",
+					"name": "director",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": ""
+				},
+				{
+					"id": "3080cfc5-c861-403d-b7a6-24b34298f931",
+					"name": "producer",
+					"parent": "",
+					"description": "",
+					"pattern": "",
+					"example": "",
+					"objectType": "string",
+					"maxLength": ""
+				},
+				{
+					"id": "73814ab5-cd49-45a9-cca5-8aebd01c9787",
+					"name": "starships",
+					"parent": "",
+					"description": "An array of starship resource URLs that are in this film.",
+					"pattern": "",
+					"example": "",
+					"objectType": "array",
+					"maxLength": ""
+				}
+			]
+		}
+	],
+	"documentation": [],
+	"name": "Star Wars API",
+	"endpoint": "https://swapi.dev/api",
+	"ver": "24.2.2.1753",
+	"version": "1.0.0",
+	"description": null,
+	"mediaType": "application/json",
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "",
+	"about": [
+		"==OBJECT STRING==",
+		"Welcome to the swapi, the Star Wars API! This documentation should help you familiarise yourself with the resources available and how to consume them with HTTP requests. If you're after a native helper library then I suggest you scroll down and check out what's available. Read through the getting started section before you dive in. Most of your problems should be solved just by reading through it.",
+		""
+	],
+	"enableProxy": true,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": true,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "acff775f-4817-4f25-977e-272b641129b5",
+	"apiGroup": null,
+	"apiFormat": 0,
+	"roles": []
+}

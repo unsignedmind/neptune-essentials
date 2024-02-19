@@ -1,0 +1,7 @@
+const context = oEvent.oSource.getBindingContext();
+const data = context.getObject();
+
+saveButton.setText("UPDATE");
+nameInput.setValue(data.name);
+idValueHolder.setText(data.id);
+oDialog.open();

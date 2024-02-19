@@ -1,0 +1,26 @@
+{
+	"id": "9b69b7a6-0d06-43a8-970e-5d0249c745bb",
+	"createdAt": "2024-02-02T16:51:32.000Z",
+	"createdBy": "admin",
+	"headers": [],
+	"details": {
+		"subject": {},
+		"headers": [],
+		"certificate": "f64ebb6b-32e8-4eec-800a-06c29fdfd747",
+		"password": "",
+		"secret": ""
+	},
+	"azureRelayDetails": {
+		"ns": "",
+		"path": "",
+		"keyRule": "",
+		"key": ""
+	},
+	"name": "Client Auth",
+	"description": null,
+	"type": "clientcert",
+	"useCloudConnector": false,
+	"cloudConnectorType": null,
+	"ver": null,
+	"package": "acff775f-4817-4f25-977e-272b641129b5"
+}

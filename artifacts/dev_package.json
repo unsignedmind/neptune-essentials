@@ -1,0 +1,105 @@
+{
+	"id": "acff775f-4817-4f25-977e-272b641129b5",
+	"createdAt": "2024-01-11T14:20:09.000Z",
+	"createdBy": "admin",
+	"git": {
+		"remote": "https://github.com/unsignedmind/neptune-essentials.git"
+	},
+	"name": "essentials",
+	"description": null,
+	"ver": "24.2.19.220",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "a976a595-9e6b-4222-858e-4bbced1d871e",
+			"application": "externalapicrud",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "a428c71b-e3e4-44a8-88a8-09c088a75f62",
+			"application": "apptwo",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "8fe4b185-78c4-4e98-828f-d9952a11ff77",
+			"application": "appthree",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "21750a14-2703-4b46-b3f7-43932cb294b3",
+			"application": "appone",
+			"title": "",
+			"description": ""
+		},
+		{
+			"id": "044d1ffb-34c0-432e-aab9-f61bc9d9bee5",
+			"application": "layout_test",
+			"title": "",
+			"description": ""
+		}
+	],
+	"api": [
+		{
+			"id": "181b917e-4d2e-4033-b39c-78a18230c25f",
+			"name": "TestApi",
+			"description": null,
+			"apiGroup": null
+		},
+		{
+			"id": "090339cf-84e6-42cb-9dda-c7ea96bc0a0c",
+			"name": "Star Wars API",
+			"description": null,
+			"apiGroup": null
+		}
+	],
+	"odataSource": [],
+	"odataMock": [],
+	"dictionary": [],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [
+		{
+			"id": "f4f47b85-ee32-4121-8e14-517ed062d557",
+			"name": "OAuth2.0",
+			"description": null
+		},
+		{
+			"id": "9b69b7a6-0d06-43a8-970e-5d0249c745bb",
+			"name": "Client Auth",
+			"description": null
+		}
+	],
+	"api_group": [],
+	"tile": [
+		{
+			"id": "a69fcd41-2f14-428f-9d0a-118634933ac0",
+			"description": null,
+			"name": "layout"
+		}
+	],
+	"category": [
+		{
+			"id": "c5c84afb-6066-4597-a2f4-022e1fbc7255",
+			"description": null,
+			"name": "test group"
+		}
+	],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"department": [],
+	"script_scheduler": [],
+	"wf_definition": [],
+	"connector": [],
+	"events": []
+}
